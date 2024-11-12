@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Sign up</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+  
+    
+    <h1></h1>
+
+    <div class="form1">
+     
+      <div class="Name">
+       
+        <label for="Name" align="center">LOGIN AS DONOR</label>
+        <input
+          type="text"
+          name="Name"
+          id="Name"
+          placeholder="Enter your Name"
+        />
+      </div>
+    
+      <div class="Number">
+        <input
+          type="phone"
+          name="number"
+          id="number"
+          placeholder="Enter your number"
+        />
+
+        <div class="email">
+         
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Enter your Email"
+          />
+        </div>
+
+         
+      <div class="aadhar">
+        <input
+          type="text"
+          name="aadhar"
+          id="aadhar"
+          placeholder="Aadhar card Number"
+        />
+      </div>
+
+
+      <h4>Upload Aadhar Card </h4>
+      <form action="/upload" method="post" enctype="multipart/form-data">
+        <div>
+          <input type="file" id="image" name="image" accept="image/*">
+        </div>
+        <div>
+          <button type="submit">Upload</button>
+        </div>
+      </form>
+
+
+
+      <div class="Address">
+        <input
+          type="text"
+          name="address"
+          id="address"
+          placeholder="Entre your addresss"
+        />
+      </div>
+
+      <div class="Otp">
+        <input
+          type="otp"
+          name="otp"
+          id="address"
+          placeholder="Entre OTP"
+        />
+      </div>
+
+
+
+      
+      <button><a href="ng.html" color="white">singup</a></button>
+    
+      <p>PRESENTED BY HACKHORIZON</p>
+     
+    </div>
+  </body>
+</html>
