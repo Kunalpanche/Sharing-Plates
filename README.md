@@ -40,17 +40,8 @@ A **community-driven platform** to combat food waste by connecting individuals a
 
 - **Reduce Food Waste**: Prevent leftover food from ending up in landfills.  
 - **Combat Hunger**: Ensure food reaches those who need it most.  
-- **Sustainability**: Contribute to environmental sustainability by reducing food-related waste.  
-
----
-
-## 🛠️ **Tech Stack**  
-
-- **Frontend**: React.js  
-- **Backend**: Node.js, Express.js  
-- **Database**: MongoDB  
-- **Additional Tools**: Google Maps API for location services  
-
+- **Sustainability**: Contribute to environmental sustainability by reducing food-related waste.
+- 
 ---
 
 ## 🌍 **Impact**  
@@ -65,4 +56,4 @@ A **community-driven platform** to combat food waste by connecting individuals a
 
 1. Clone the repository:  
    ```bash  
-   git clone https://github.com/<your-username>/sharing-plates.git  
+   git clone https://github.com/Kunalpanche/Sharing-Plates.git
