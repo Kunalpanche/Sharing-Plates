@@ -41,7 +41,7 @@ A **community-driven platform** to combat food waste by connecting individuals a
 - **Reduce Food Waste**: Prevent leftover food from ending up in landfills.  
 - **Combat Hunger**: Ensure food reaches those who need it most.  
 - **Sustainability**: Contribute to environmental sustainability by reducing food-related waste.
-- 
+
 ---
 
 ## 🌍 **Impact**  
