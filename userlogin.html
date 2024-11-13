@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Donate - SharingPlates</title>
+    <title>Login - SharingPlates</title>
     <style>
         :root {
             --primary: #16a34a;
@@ -95,12 +95,12 @@
             padding: 4rem 0;
         }
 
-        .donate-form {
+        .login-form {
             background-color: var(--white);
             padding: 2rem;
             border-radius: 0.5rem;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            max-width: 600px;
+            max-width: 400px;
             margin: 0 auto;
         }
 
@@ -120,51 +120,24 @@
             font-weight: bold;
         }
 
-        input, select, textarea {
+        input {
             padding: 0.5rem;
             border: 1px solid var(--text-light);
             border-radius: 0.25rem;
         }
 
-        textarea {
-            resize: vertical;
-            min-height: 100px;
+        .forgot-password {
+            text-align: right;
+            font-size: 0.9rem;
         }
 
-        .donation-options {
-            display: flex;
-            gap: 1rem;
-            flex-wrap: wrap;
+        .forgot-password a {
+            color: var(--primary);
+            text-decoration: none;
         }
 
-        .donation-option {
-            flex: 1;
-            min-width: 100px;
-        }
-
-        .donation-option label {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 1rem;
-            border: 1px solid var(--text-light);
-            border-radius: 0.25rem;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .donation-option label:hover {
-            background-color: var(--secondary);
-        }
-
-        .donation-option input[type="radio"] {
-            display: none;
-        }
-
-        .donation-option input[type="radio"]:checked + label {
-            background-color: var(--primary);
-            color: var(--white);
-            border-color: var(--primary);
+        .forgot-password a:hover {
+            text-decoration: underline;
         }
 
         /* Footer styles */
@@ -290,7 +263,7 @@
 </head>
 <body>
     <!-- Loading Screen -->
-    <!-- <div class="loading-screen">
+    <div class="loading-screen">
         <div class="logo-container">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"></path>
@@ -298,7 +271,7 @@
                 <path d="M21 15V2v0a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"></path>
             </svg>
         </div>
-    </div> -->
+    </div>
 
     <header>
         <nav class="container">
@@ -314,7 +287,7 @@
                 <a href="index.html">Home</a>
                 <a href="about.html">About</a>
                 <a href="find-food.html">Find Food</a>
-                <a href="./donorlogin.html">Donate</a>
+                <a href="donate.html">Donate</a>
             </div>
             <button class="btn">Login</button>
         </nav>
@@ -322,68 +295,21 @@
 
     <main>
         <div class="container">
-            <div class="donate-form">
-                <h1>Donate to SharingPlates</h1>
-                <form id="donateForm">
-                    <div>
-                        <label for="name">Full Name</label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
+            <div class="login-form">
+                <h1>Login</h1>
+                <form id="loginForm">
                     <div>
                         <label for="email">Email</label>
                         <input type="email" id="email" name="email" required>
                     </div>
                     <div>
-                        <label for="donationType">Donation Type</label>
-                        <select id="donationType" name="donationType" required>
-                            <option value="">Select donation type</option>
-                            <option value="money">Money</option>
-                            <option value="food">Food</option>
-                            <option value="time">Volunteer Time</option>
-                        </select>
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" required>
                     </div>
-                    <div id="moneyDonation" style="display: none;">
-                        <label>Donation Amount</label>
-                        <div class="donation-options">
-                            <div class="donation-option">
-                                <input type="radio" id="amount10" name="amount" value="10">
-                                <label for="amount10">$10</label>
-                            </div>
-                            <div class="donation-option">
-                                <input type="radio" id="amount25" name="amount" value="25">
-                                <label for="amount25">$25</label>
-                            </div>
-                            <div class="donation-option">
-                                <input type="radio" id="amount50" name="amount" value="50">
-                                <label for="amount50">$50</label>
-                            </div>
-                            <div class="donation-option">
-                                <input type="radio" id="amount100" name="amount" value="100">
-                                <label for="amount100">$100</label>
-                            </div>
-                            <div class="donation-option">
-                                <input type="radio" id="amountCustom" name="amount" value="custom">
-                                <label for="amountCustom">Custom</label>
-                            </div>
-                        </div>
-                        <div id="customAmount" style="display: none;">
-                            <label for="customAmountInput">Enter custom amount ($)</label>
-                            <input type="number" id="customAmountInput" name="customAmount" min="1" step="1">
-                        </div>
+                    <div class="forgot-password">
+                        <a href="#">Forgot password?</a>
                     </div>
-                    <div id="foodDonation" style="display: none;">
-                        <label for="foodDescription">Food Description</label>
-                        <textarea id="foodDescription" name="foodDescription"></textarea>
-                    </div>
-                    <div id="timeDonation" style="display: none;">
-                        <label for="volunteerHours">Volunteer Hours</label>
-                        <input type="number" id="volunteerHours" name="volunteerHours" min="1" step="1">
-                    </div>
-                    <div>
-                        <label for="message">Message (Optional)</label>
-                        <textarea id="message" name="message"></textarea>
-                    </div>
-                    <button type="submit" class="btn">Submit Donation</button>
+                    <button type="submit" class="btn">Login</button>
                 </form>
             </div>
         </div>
@@ -434,6 +360,30 @@
         </div>
     </footer>
 
-    
+    <script>
+        // Loading screen functionality
+        window.addEventListener('load', function() {
+            const loadingScreen = document.querySelector('.loading-screen');
+            setTimeout(() => {
+                loadingScreen.classList.add('hidden');
+            }, 1500);
+        });
+
+        // Show loading screen on page refresh
+        window.addEventListener('beforeunload', function() {
+            const loadingScreen = document.querySelector('.loading-screen');
+            loadingScreen.classList.remove('hidden');
+        });
+
+        // Login form submission
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            // Here you would typically send the login data to your server
+            console.log('Login attempt:', { email, password });
+            alert('Login functionality would be implemented here.');
+        });
+    </script>
 </body>
 </html>
